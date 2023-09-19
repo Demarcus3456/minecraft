@@ -192,17 +192,11 @@
 
 
 	<div id="titleScreenGUI">
-		<img src="titleScreen/one.jpeg" class="titleScreen">
 		<img src="titleScreen/two.jpeg" class="titleScreen">
-		<img src="titleScreen/three.jpeg" class="titleScreen">
-		<img src="titleScreen/four.jpeg" class="titleScreen">
-		<img src="titleScreen/five.jpeg" class="titleScreen">
-		<img src="titleScreen/six.jpeg" class="titleScreen">
 
 		<button id="newgame" class="startingButtons" style="top : 40%; z-index: 10000;">New Game</button>
 		<button id="loadgame" class="startingButtons" style="top : 55%">Load Game</button>
-		<button id="options" class="startingButtons" style="top : 70%">Options</button>
-		<h1>Created by Demarcus3456</h1>
+		<button id="options" class="startingButtons" style="top : 70%">Created by Demarcus3456</button>
 		<input type="file" style="position: absolute; color: white; display: none" id="inputFile" accept=".json">
 
 		<img src="minecraftlogo.png" id="startingLogo">
@@ -221,19 +215,6 @@
 		var loadGameButton = document.getElementById("loadgame");
 		var titleScreenSaveButton = document.getElementById("titlescreensave");
 
-		var pictureCount = 0;
-		timeIntervalPictureChange = 5000;
-		window.setInterval(function () {
-			if (pictureCount == document.getElementsByClassName("titleScreen").length) {
-				pictureCount = 0;
-			}
-			var pictures = document.getElementsByClassName("titleScreen");
-			for (var i = 0; i < pictures.length; i++) {
-				pictures[i].style.zIndex = -5;
-			}
-			pictures[pictureCount].style.zIndex = -4;
-			pictureCount++;
-		}, timeIntervalPictureChange);
 
 		newGameButton.addEventListener("click", function () {
 			game("new");
